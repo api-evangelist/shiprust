@@ -1,0 +1,127 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/shiprust/main/json-schema/shiprust-project-list-schema.json",
+  "title": "ProjectList",
+  "x-generated": "2026-10-20",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/shiprust-openapi.json#/components/schemas/ProjectList",
+  "type": "object",
+  "required": [
+    "projects"
+  ],
+  "properties": {
+    "projects": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Project"
+      },
+      "description": "Newest first."
+    }
+  },
+  "$defs": {
+    "Project": {
+      "type": "object",
+      "description": "A generated project and the choices it was generated with.",
+      "required": [
+        "id",
+        "name",
+        "slug",
+        "description",
+        "host",
+        "include_blog",
+        "include_docs",
+        "include_auth",
+        "include_google",
+        "include_github",
+        "include_stripe",
+        "include_api",
+        "include_mcp",
+        "include_storage",
+        "include_qdrant",
+        "sentry_features",
+        "posthog_features",
+        "template_version",
+        "created_at",
+        "url",
+        "download_url"
+      ],
+      "properties": {
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "description": {
+          "type": "string"
+        },
+        "download_url": {
+          "type": "string",
+          "description": "The project's zip, `GET` with the same key."
+        },
+        "host": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "include_api": {
+          "type": "boolean"
+        },
+        "include_auth": {
+          "type": "boolean"
+        },
+        "include_blog": {
+          "type": "boolean"
+        },
+        "include_docs": {
+          "type": "boolean"
+        },
+        "include_github": {
+          "type": "boolean"
+        },
+        "include_google": {
+          "type": "boolean"
+        },
+        "include_mcp": {
+          "type": "boolean"
+        },
+        "include_qdrant": {
+          "type": "boolean"
+        },
+        "include_storage": {
+          "type": "boolean"
+        },
+        "include_stripe": {
+          "type": "boolean"
+        },
+        "name": {
+          "type": "string"
+        },
+        "posthog_features": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sentry_features": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "slug": {
+          "type": "string"
+        },
+        "template_version": {
+          "type": "string",
+          "description": "The template revision the project's zip is generated from."
+        },
+        "url": {
+          "type": "string",
+          "description": "This project in the API."
+        }
+      }
+    }
+  }
+}

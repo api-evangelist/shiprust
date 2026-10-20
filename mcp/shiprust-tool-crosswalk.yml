@@ -1,0 +1,34 @@
+generated: '2026-10-20'
+method: probed
+source: https://shiprust.com/docs/mcp
+crosswalk:
+  - tool: get_account
+    category: account
+    rest: [get_account]
+    binding: direct
+    confidence: high
+  - tool: list_options
+    category: options
+    rest: [list_options]
+    binding: direct
+    confidence: high
+  - tool: list_projects
+    category: projects
+    rest: [list_projects]
+    binding: direct
+    confidence: high
+  - tool: create_project
+    category: projects
+    rest: [create_project]
+    binding: direct
+    confidence: high
+  - tool: get_project
+    category: projects
+    rest: [get_project]
+    binding: direct
+    confidence: high
+  - tool: delete_project
+    category: projects
+    rest: [delete_project]
+    binding: direct
+    confidence: high

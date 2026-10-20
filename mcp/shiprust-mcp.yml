@@ -1,0 +1,8 @@
+generated: '2026-10-20'
+method: probed
+source: https://shiprust.com/docs/mcp
+deployment:
+  mode: remote
+  endpoint: https://shiprust.com/mcp
+  auth: oauth
+  verified: probed

@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/shiprust/main/json-schema/shiprust-create-request-schema.json",
+  "title": "CreateRequest",
+  "description": "A new project. Only `name` is required; omitted fields take the new-project form's defaults (`GET /api/v1/options`). Unknown fields and capabilities are rejected with 422.",
+  "x-generated": "2026-10-20",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/shiprust-openapi.json#/components/schemas/CreateRequest",
+  "type": "object",
+  "required": [
+    "name"
+  ],
+  "properties": {
+    "description": {
+      "type": "string",
+      "description": "For your own reference.",
+      "maxLength": 1000
+    },
+    "host": {
+      "type": "string",
+      "description": "A `value` from the options' `hosts`.",
+      "default": "none"
+    },
+    "include_api": {
+      "type": "boolean",
+      "description": "A JSON API for your users, with personal API keys and bearer authentication.",
+      "default": true
+    },
+    "include_auth": {
+      "type": "boolean",
+      "description": "Accounts: sign-up with email verification, sign-in, passkeys, two-factor,\nsettings, a dashboard and an admin panel. `false` generates a public site\nand leaves out the options that act for a signed-in user (`include_google`, `include_github`,\n`include_api`, `include_mcp`, `include_storage`, `include_stripe`,\n`include_qdrant`), whatever they say.",
+      "default": true
+    },
+    "include_blog": {
+      "type": "boolean",
+      "description": "Markdown posts and RSS.",
+      "default": true
+    },
+    "include_docs": {
+      "type": "boolean",
+      "description": "Product documentation pages.",
+      "default": true
+    },
+    "include_github": {
+      "type": "boolean",
+      "description": "Sign up and sign in with GitHub, connect GitHub to an existing account from\nsettings, and confirm sensitive changes with GitHub for accounts without a\npassword. Hidden until the owner configures their GitHub OAuth App.",
+      "default": true
+    },
+    "include_google": {
+      "type": "boolean",
+      "description": "Sign up and sign in with Google, connect Google to an existing account from\nsettings, and confirm sensitive changes with Google for accounts without a\npassword. Hidden until the owner configures their Google client.",
+      "default": true
+    },
+    "include_mcp": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "An MCP server at `/mcp`. Omitted or null follows `include_api`, so\nturning the API off never needs a second field; `true` without the API is a 422."
+    },
+    "include_qdrant": {
+      "type": "boolean",
+      "description": "Qdrant vector search scoped per user. Off by default: most products\ndo not need a vector database.",
+      "default": false
+    },
+    "include_storage": {
+      "type": "boolean",
+      "description": "File storage for user uploads, with a profile picture upload as the example.",
+      "default": true
+    },
+    "include_stripe": {
+      "type": "boolean",
+      "description": "Hosted Checkout, billing portal and webhooks.",
+      "default": true
+    },
+    "name": {
+      "type": "string",
+      "description": "Replaces ShipRust in the generated project.",
+      "maxLength": 64,
+      "minLength": 2
+    },
+    "posthog_features": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Keys from the options' `posthog_features`; all by default. An empty list turns PostHog off.",
+      "default": [
+        "posthog-web",
+        "posthog-product",
+        "posthog-errors",
+        "posthog-logs",
+        "posthog-traces"
+      ]
+    },
+    "sentry_features": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Keys from the options' `sentry_features`; all by default. An empty list turns Sentry off.",
+      "default": [
+        "sentry-errors",
+        "sentry-traces",
+        "sentry-logs",
+        "sentry-metrics",
+        "sentry-replay"
+      ]
+    },
+    "slug": {
+      "type": "string",
+      "description": "Lowercase letters, digits and dashes, starting with a letter. Derived\nfrom `name` when empty. Unique per account.",
+      "maxLength": 40,
+      "pattern": "^([a-z][a-z0-9-]*)?$"
+    }
+  },
+  "additionalProperties": false
+}

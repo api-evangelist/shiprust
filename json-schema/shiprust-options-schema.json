@@ -1,0 +1,223 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/shiprust/main/json-schema/shiprust-options-schema.json",
+  "title": "Options",
+  "description": "The generator's choices, their defaults and the input limits.",
+  "x-generated": "2026-10-20",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/shiprust-openapi.json#/components/schemas/Options",
+  "type": "object",
+  "required": [
+    "template_version",
+    "hosts",
+    "sentry_features",
+    "posthog_features",
+    "defaults",
+    "limits"
+  ],
+  "properties": {
+    "defaults": {
+      "$ref": "#/$defs/Defaults"
+    },
+    "hosts": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Choice"
+      }
+    },
+    "limits": {
+      "$ref": "#/$defs/Limits"
+    },
+    "posthog_features": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Capability"
+      }
+    },
+    "sentry_features": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Capability"
+      }
+    },
+    "template_version": {
+      "type": "string",
+      "description": "The template revision new projects are generated from."
+    }
+  },
+  "$defs": {
+    "Capability": {
+      "type": "object",
+      "description": "A capability key for `sentry_features` or `posthog_features`.",
+      "required": [
+        "key",
+        "label",
+        "description"
+      ],
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "key": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        }
+      }
+    },
+    "Choice": {
+      "type": "object",
+      "description": "A hosting target for `host`.",
+      "required": [
+        "value",
+        "label",
+        "description"
+      ],
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        }
+      }
+    },
+    "Defaults": {
+      "type": "object",
+      "description": "What `POST /api/v1/projects` uses for each omitted field.",
+      "required": [
+        "host",
+        "include_blog",
+        "include_docs",
+        "include_auth",
+        "include_google",
+        "include_github",
+        "include_stripe",
+        "include_api",
+        "include_storage",
+        "include_qdrant",
+        "sentry_features",
+        "posthog_features"
+      ],
+      "properties": {
+        "host": {
+          "type": "string"
+        },
+        "include_api": {
+          "type": "boolean"
+        },
+        "include_auth": {
+          "type": "boolean"
+        },
+        "include_blog": {
+          "type": "boolean"
+        },
+        "include_docs": {
+          "type": "boolean"
+        },
+        "include_github": {
+          "type": "boolean"
+        },
+        "include_google": {
+          "type": "boolean"
+        },
+        "include_mcp": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "include_qdrant": {
+          "type": "boolean"
+        },
+        "include_storage": {
+          "type": "boolean"
+        },
+        "include_stripe": {
+          "type": "boolean"
+        },
+        "posthog_features": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sentry_features": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "Limits": {
+      "type": "object",
+      "required": [
+        "name",
+        "slug",
+        "description"
+      ],
+      "properties": {
+        "description": {
+          "$ref": "#/$defs/MaxLength"
+        },
+        "name": {
+          "$ref": "#/$defs/Range"
+        },
+        "slug": {
+          "$ref": "#/$defs/SlugLimit"
+        }
+      }
+    },
+    "MaxLength": {
+      "type": "object",
+      "required": [
+        "max"
+      ],
+      "properties": {
+        "max": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "Range": {
+      "type": "object",
+      "required": [
+        "min",
+        "max"
+      ],
+      "properties": {
+        "max": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "min": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "SlugLimit": {
+      "type": "object",
+      "required": [
+        "max",
+        "pattern"
+      ],
+      "properties": {
+        "max": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "pattern": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+generated: '2026-10-20'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 2
+  own: 2
+  other_domain: 0
+  platform: 0
+  roles:
+  - api
+  - website
+hosts:
+- host: api.shiprust.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: shiprust.com
+  role: api
+  relation: own
+- host: shiprust.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - docs-index
+  - spec-found
+  - contract-discovery
+  - well-known
+  types:
+  - Website
+  - Documentation
+  - DeveloperPortal
+  - APIReference
+  - GettingStarted
+  - Blog
+  - SignUp
+  - SignIn
+  serves:
+  - api
+  - docs
+  - spec
+  registrable_domain: shiprust.com
+  role: website
+  relation: own

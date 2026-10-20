@@ -1,28 +1,120 @@
 aid: shiprust
 name: ShipRust
-description: 'ShipRust is a company surfaced via the API Evangelist harvest backlog (source: new-submission)
-  and added to the network as a stub for full-pipeline profiling.'
+image: https://shiprust.com/assets/og-image.png?v=b2dd1faf0277
+description: ShipRust provides a Rust-based SaaS starter platform that includes a ready-to-use Axum web framework, Maud templating, PostgreSQL
+  integration, authentication, Stripe billing, monitoring, and a full set of developer tools. It enables developers to launch a production-ready
+  SaaS application in an afternoon, offering sign‑in, payments, analytics, and extensible codebase for building unlimited Rust web services.
 url: https://raw.githubusercontent.com/api-evangelist/shiprust/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:new-submission
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-20 (modular-v1; was harvest)
 specificationVersion: '0.20'
 created: '2026-10-20'
 modified: '2026-10-20'
 tags:
-- Company
-apis: []
+- Rust
+- SaaS
+- Starter
+- Axum
+- PostgreSQL
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: AgenticAccess
+  url: agentic-access/shiprust-agentic-access.yml
+- type: Plans
+  url: plans/shiprust-plans-pricing.yml
+- type: Spectral
+  url: rules/shiprust-rules.yml
+- type: JSONLD
+  url: json-ld/shiprust-context.jsonld
+- type: Vocabulary
+  url: vocabulary/shiprust-vocabulary.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: DataModel
+  url: data-model/shiprust-data-model.yml
+- type: ErrorCatalog
+  url: errors/shiprust-problem-types.yml
+- type: Conformance
+  url: conformance/shiprust-conformance.yml
+- type: LLMsTxt
+  url: llms/shiprust-llms.txt
+- type: ToolCrosswalk
+  url: mcp/shiprust-tool-crosswalk.yml
+- type: MCPServer
+  url: mcp/shiprust-mcp.yml
+- type: WellKnown
+  url: well-known/shiprust-well-known.yml
+- type: Hosts
+  url: hosts/shiprust-hosts.yml
+- type: Authentication
+  url: authentication/shiprust-authentication.yml
+- type: DomainSecurity
+  url: security/shiprust-domain-security.yml
 - type: Website
   url: https://shiprust.com
 - type: Documentation
   url: https://shiprust.com/docs/api
+- type: DeveloperPortal
+  url: https://shiprust.com
+- type: APIReference
+  url: https://shiprust.com/docs/api
+- type: GettingStarted
+  url: https://shiprust.com/docs/getting-started
+- type: Blog
+  url: https://shiprust.com/blog
+- type: SignUp
+  url: https://shiprust.com/sign-up
+- type: SignIn
+  url: https://shiprust.com/sign-in
+apis:
+- aid: shiprust:shiprust-account-api
+  name: ShipRust Account API
+  description: The account behind the key
+  humanURL: https://shiprust.com/docs/api
+  tags:
+  - account
+  properties:
+  - type: OpenAPI
+    url: openapi/shiprust-account-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/shiprust-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shiprust-project-schema.json
+  - type: JSONSchema
+    url: json-schema/shiprust-options-schema.json
+  - type: JSONSchema
+    url: json-schema/shiprust-account-schema.json
+  - type: JSONSchema
+    url: json-schema/shiprust-project-list-schema.json
+  - type: JSONSchema
+    url: json-schema/shiprust-project-zip-schema.json
+- aid: shiprust:shiprust-projects-api
+  name: ShipRust Projects API
+  description: Generated projects
+  humanURL: https://shiprust.com/docs/api
+  tags:
+  - projects
+  properties:
+  - type: OpenAPI
+    url: openapi/shiprust-projects-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/shiprust-create-request-schema.json
+  - type: JSONSchema
+    url: json-schema/shiprust-project-schema.json
+  - type: JSONSchema
+    url: json-schema/shiprust-options-schema.json
+  - type: JSONSchema
+    url: json-schema/shiprust-account-schema.json
+  - type: JSONSchema
+    url: json-schema/shiprust-project-list-schema.json
+  - type: JSONSchema
+    url: json-schema/shiprust-project-zip-schema.json
 x-submission-notes: 'Hello APIs.io team,
 
 
@@ -45,3 +137,23 @@ x-submission-notes: 'Hello APIs.io team,
   ShipRust generates Rust SaaS starter projects using Axum, Maud and PostgreSQL. Its REST API let'
 x-submission-probe: root 200, OpenAPI 3.1 200, soft-404 clean
 x-submitted-by: Rasul Kireev <beacon@lvtd.dev> (email, 2026-10-19)
+x-coverage:
+  state: gated
+  reason: partner-login
+  method: derived
+  generated: '2026-10-20'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: the company serves an API surface but requires credentials before any description of it can be read
+  evidence:
+  - url: https://shiprust.com/openapi.json
+    status: null
+  - url: https://shiprust.com/mcp
+    status: 401
+  - url: https://shiprust.com
+    status: 200
+x-enrichment:
+  date: '2026-10-20'
+  status: enriched
+  artifacts_added: 25
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

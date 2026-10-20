@@ -1,0 +1,73 @@
+openapi: 3.2.0
+info:
+  title: ShipRust Account API
+  description: 'Create and download ShipRust projects with a personal API key. Create a key in Settings and send it as `Authorization: Bearer sr_...`. Every error is a JSON object with an `error` message. Guide: https://shiprust.com/docs/api'
+  license:
+    name: Proprietary
+  version: '1'
+tags:
+- name: Account
+  description: The account behind the key
+paths:
+  /api/v1/me:
+    get:
+      tags:
+      - Account
+      summary: The account behind the key, including whether it has paid access
+      operationId: get_account
+      responses:
+        '200':
+          description: The account
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Account'
+        '401':
+          description: Missing, invalid or revoked key
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBody'
+      security:
+      - api_key: []
+components:
+  schemas:
+    ErrorBody:
+      type: object
+      description: The body of every error response.
+      required:
+      - error
+      properties:
+        error:
+          type: string
+          description: What went wrong, written for a person.
+          example: This API key is invalid or has been revoked.
+    Account:
+      type: object
+      description: The account behind an API key.
+      required:
+      - id
+      - email
+      - paid
+      - created_at
+      properties:
+        created_at:
+          type: string
+          format: date-time
+        email:
+          type: string
+          example: you@example.com
+        id:
+          type: string
+          format: uuid
+        paid:
+          type: boolean
+          description: 'Whether the account can create and download projects: a lifetime
+
+            purchase or an active admin role.'
+  securitySchemes:
+    api_key:
+      type: http
+      scheme: bearer
+      bearerFormat: sr_<64 hex characters>
+      description: A personal API key from Settings, or an OAuth 2.1 access token obtained through the authorization server described at /.well-known/oauth-authorization-server. Cookies are never accepted.

@@ -1,0 +1,11 @@
+generated: '2026-10-20'
+method: generated
+generator: extract-docs-artifacts.py skills (local)
+source: openapi/shiprust-openapi.json
+skills:
+- file: skills/shiprust-create-and-download-project.md
+  name: shiprust-create-and-download-project
+  api: openapi/shiprust-openapi.json
+  operations:
+  - create_project
+  - download_project

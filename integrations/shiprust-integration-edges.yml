@@ -1,0 +1,16 @@
+generated: '2026-10-20'
+method: none
+source:
+- https://zapier.com/apps/shiprust/integrations
+- https://n8n.io/integrations/shiprust/
+- https://composio.dev/toolkits/shiprust
+- https://monid.ai/tools/shiprust
+checked:
+- https://composio.dev/toolkits/shiprust
+- https://monid.ai/tools/shiprust
+- https://n8n.io/integrations/shiprust/
+- https://zapier.com/apps/shiprust/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []

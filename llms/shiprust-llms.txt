@@ -1,0 +1,28 @@
+# ShipRust
+
+> A Rust SaaS starter that gives your next app a head start.
+
+## Documentation
+
+- [Full documentation](https://shiprust.com/llms-full.txt): All published guides in one Markdown file.
+
+## Guides
+
+- [Welcome to ShipRust](https://shiprust.com/docs): A Rust SaaS starter that gives your next app a head start.
+- [Getting started](https://shiprust.com/docs/getting-started): Verify your email, unlock lifetime access, and create your first Rust SaaS project with ShipRust.
+- [Generate a project](https://shiprust.com/docs/generating-a-project): Choose a name, hosting option, and the features your app needs.
+- [Download your codebase](https://shiprust.com/docs/downloading-your-codebase): Get your ZIP, run the app locally, and start making it yours.
+- [Blog](https://shiprust.com/docs/blog): Publish Markdown articles with an RSS feed built into your app.
+- [Docs](https://shiprust.com/docs/docs): Give your product its own Markdown documentation.
+- [Sentry](https://shiprust.com/docs/sentry): Monitor errors and performance with your own Sentry project.
+- [PostHog](https://shiprust.com/docs/posthog): Choose web analytics, product events, errors, logs, and request traces.
+- [Passkeys](https://shiprust.com/docs/passkeys): Generated projects let verified users sign in with Face ID, Touch ID, Windows Hello or a security key.
+- [Two-factor authentication](https://shiprust.com/docs/two-factor): Generated projects let users add an authenticator app as a second step when signing in with a password.
+- [Stripe billing](https://shiprust.com/docs/stripe): Configure hosted Checkout, subscriptions, one-time payments, and the customer portal.
+- [Vector search with Qdrant](https://shiprust.com/docs/qdrant): Store embeddings in Qdrant and search them per user, with your own embedding model.
+- [Background jobs](https://shiprust.com/docs/background-jobs): Every generated project includes a durable Postgres job queue with retries and a worker you can run in-process or separately.
+- [Docker hosting](https://shiprust.com/docs/docker): Deploy the included container with your own hosting setup.
+- [CapRover](https://shiprust.com/docs/caprover): Deploy from GitHub with the generated CapRover workflow.
+- [JSON API](https://shiprust.com/docs/api): Create and download projects from scripts and coding agents with a personal API key or an OAuth connection.
+- [MCP server](https://shiprust.com/docs/mcp): Let Claude, ChatGPT, Claude Code, Cursor and other agents generate ShipRust projects as tools over the Model Context Protocol, with OAuth or an API key.
+- [Set up your AI agent](https://shiprust.com/docs/ai-agent-setup): Connect Codex, Claude Code, Cursor, Claude, ChatGPT and other AI agents to ShipRust with the official plugins, skills, OAuth and MCP configuration.

@@ -1,0 +1,55 @@
+generated: '2026-10-20'
+method: derived
+generator: derive-problem-types.py
+source:
+- openapi/shiprust-openapi.json
+format: custom
+envelope:
+  media_type: application/json
+  schema: ErrorBody
+coverage:
+  operations: 7
+  statuses_declared: 6
+problems:
+- status: 400
+  title: Bad Request
+  description: The body is not a JSON object
+  operations: 1
+  media_types:
+  - application/json
+  schema: ErrorBody
+- status: 401
+  title: Unauthorized
+  description: Missing, invalid or revoked key
+  operations: 6
+  media_types:
+  - application/json
+  schema: ErrorBody
+- status: 402
+  title: Payment Required
+  description: The account has no lifetime access yet
+  operations: 3
+  media_types:
+  - application/json
+  schema: ErrorBody
+- status: 404
+  title: Not Found
+  description: No such project on this account
+  operations: 3
+  media_types:
+  - application/json
+  schema: ErrorBody
+- status: 409
+  title: Conflict
+  description: The slug is already taken
+  operations: 1
+  media_types:
+  - application/json
+  schema: ErrorBody
+- status: 422
+  title: Unprocessable Content
+  description: Invalid choices or unknown fields
+  operations: 1
+  media_types:
+  - application/json
+  schema: ErrorBody

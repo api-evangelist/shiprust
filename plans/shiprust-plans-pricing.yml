@@ -1,0 +1,15 @@
+generated: '2026-10-20'
+method: searched
+source: https://shiprust.com/#pricing
+name: ShipRust pricing
+audience: developer-api
+pricing_basis: flat-platform
+published: true
+plan_count: 1
+plans:
+  - name: Lifetime access
+    price_text: "999.00 USD"
+    price: 999.00
+    currency: USD
+    description: Lifetime access to ShipRust SaaS starter.
+    limits: []

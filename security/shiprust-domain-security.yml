@@ -1,0 +1,16 @@
+generated: '2026-10-20'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: shiprust.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Jan  3 18:27:01 2027 GMT
+  hsts: false
+domains:
+- domain: shiprust.com
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: none

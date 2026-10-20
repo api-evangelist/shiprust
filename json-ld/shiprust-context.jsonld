@@ -1,0 +1,165 @@
+{
+  "@context": {
+    "@vocab": "https://shiprust.com/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "shiprust": "https://shiprust.com/schema#",
+    "Account": "shiprust:Account",
+    "created_at": {
+      "@id": "shiprust:created_at",
+      "@type": "xsd:dateTime"
+    },
+    "email": {
+      "@id": "shiprust:email",
+      "@type": "xsd:string"
+    },
+    "id": {
+      "@id": "shiprust:id",
+      "@type": "xsd:string"
+    },
+    "paid": {
+      "@id": "shiprust:paid",
+      "@type": "xsd:boolean"
+    },
+    "Capability": "shiprust:Capability",
+    "description": {
+      "@id": "shiprust:description",
+      "@type": "xsd:string"
+    },
+    "key": {
+      "@id": "shiprust:key",
+      "@type": "xsd:string"
+    },
+    "label": {
+      "@id": "shiprust:label",
+      "@type": "xsd:string"
+    },
+    "Choice": "shiprust:Choice",
+    "value": {
+      "@id": "shiprust:value",
+      "@type": "xsd:string"
+    },
+    "CreateRequest": "shiprust:CreateRequest",
+    "host": {
+      "@id": "shiprust:host",
+      "@type": "xsd:string"
+    },
+    "include_api": {
+      "@id": "shiprust:include_api",
+      "@type": "xsd:boolean"
+    },
+    "include_auth": {
+      "@id": "shiprust:include_auth",
+      "@type": "xsd:boolean"
+    },
+    "include_blog": {
+      "@id": "shiprust:include_blog",
+      "@type": "xsd:boolean"
+    },
+    "include_docs": {
+      "@id": "shiprust:include_docs",
+      "@type": "xsd:boolean"
+    },
+    "include_github": {
+      "@id": "shiprust:include_github",
+      "@type": "xsd:boolean"
+    },
+    "include_google": {
+      "@id": "shiprust:include_google",
+      "@type": "xsd:boolean"
+    },
+    "include_mcp": {
+      "@id": "shiprust:include_mcp",
+      "@type": "xsd:boolean"
+    },
+    "include_qdrant": {
+      "@id": "shiprust:include_qdrant",
+      "@type": "xsd:boolean"
+    },
+    "include_storage": {
+      "@id": "shiprust:include_storage",
+      "@type": "xsd:boolean"
+    },
+    "include_stripe": {
+      "@id": "shiprust:include_stripe",
+      "@type": "xsd:boolean"
+    },
+    "name": {
+      "@id": "shiprust:name",
+      "@type": "xsd:string"
+    },
+    "posthog_features": {
+      "@id": "shiprust:posthog_features",
+      "@container": "@list"
+    },
+    "sentry_features": {
+      "@id": "shiprust:sentry_features",
+      "@container": "@list"
+    },
+    "slug": {
+      "@id": "shiprust:slug",
+      "@type": "xsd:string"
+    },
+    "Defaults": "shiprust:Defaults",
+    "ErrorBody": "shiprust:ErrorBody",
+    "error": {
+      "@id": "shiprust:error",
+      "@type": "xsd:string"
+    },
+    "Limits": "shiprust:Limits",
+    "MaxLength": "shiprust:MaxLength",
+    "max": {
+      "@id": "shiprust:max",
+      "@type": "xsd:integer"
+    },
+    "Options": "shiprust:Options",
+    "defaults": {
+      "@id": "shiprust:defaults",
+      "@type": "@id"
+    },
+    "hosts": {
+      "@id": "shiprust:hosts",
+      "@container": "@list"
+    },
+    "limits": {
+      "@id": "shiprust:limits",
+      "@type": "@id"
+    },
+    "template_version": {
+      "@id": "shiprust:template_version",
+      "@type": "xsd:string"
+    },
+    "Project": "shiprust:Project",
+    "download_url": {
+      "@id": "shiprust:download_url",
+      "@type": "xsd:string"
+    },
+    "url": {
+      "@id": "shiprust:url",
+      "@type": "xsd:string"
+    },
+    "ProjectList": "shiprust:ProjectList",
+    "projects": {
+      "@id": "shiprust:projects",
+      "@container": "@list"
+    },
+    "Range": "shiprust:Range",
+    "min": {
+      "@id": "shiprust:min",
+      "@type": "xsd:integer"
+    },
+    "SlugLimit": "shiprust:SlugLimit",
+    "pattern": {
+      "@id": "shiprust:pattern",
+      "@type": "xsd:string"
+    }
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "ShipRust API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects ShipRust's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-10-20) from openapi/shiprust-openapi.json.",
+  "dcterms:created": "2026-10-20",
+  "dcterms:source": [
+    "openapi/shiprust-openapi.json"
+  ]
+}

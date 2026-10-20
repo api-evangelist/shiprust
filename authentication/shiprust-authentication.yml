@@ -1,0 +1,16 @@
+generated: '2026-10-20'
+method: derived
+source: openapi/shiprust-openapi.json
+summary:
+  types:
+  - http
+schemes:
+- name: api_key
+  type: http
+  scheme: bearer
+  bearerFormat: sr_<64 hex characters>
+  description: A personal API key from Settings, or an OAuth 2.1 access token obtained through
+    the authorization server described at /.well-known/oauth-authorization-server. Cookies are
+    never accepted.
+  sources:
+  - openapi/shiprust-openapi.json

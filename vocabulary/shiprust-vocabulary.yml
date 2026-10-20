@@ -1,0 +1,91 @@
+generated: '2026-10-20'
+method: derived
+generator: derive-vocabulary.py
+source: openapi/shiprust-openapi.json
+vocabulary:
+  name: ShipRust Domain Vocabulary
+  description: 'Terms declared by ShipRust''s own API contract: its resource groups, objects and enumerations, with the contract''s definitions.
+    Derived, not authored.'
+  version: '2026-10-20'
+  terms:
+  - term: account
+    definition: The account behind the key
+    tags:
+    - Resource Group
+    source: openapi/shiprust-openapi.json
+  - term: projects
+    definition: Generated projects
+    tags:
+    - Resource Group
+    source: openapi/shiprust-openapi.json
+  - term: Account
+    definition: The account behind an API key.
+    tags:
+    - Object
+    source: openapi/shiprust-openapi.json#/components/schemas/Account
+  - term: Capability
+    definition: A capability key for `sentry_features` or `posthog_features`.
+    tags:
+    - Object
+    source: openapi/shiprust-openapi.json#/components/schemas/Capability
+  - term: Choice
+    definition: A hosting target for `host`.
+    tags:
+    - Object
+    source: openapi/shiprust-openapi.json#/components/schemas/Choice
+  - term: CreateRequest
+    definition: A new project. Only `name` is required; omitted fields take the new-project form's defaults (`GET /api/v1/options`). Unknown fields
+      and capabilities are rejected with 422.
+    tags:
+    - Object
+    source: openapi/shiprust-openapi.json#/components/schemas/CreateRequest
+  - term: Defaults
+    definition: What `POST /api/v1/projects` uses for each omitted field.
+    tags:
+    - Object
+    source: openapi/shiprust-openapi.json#/components/schemas/Defaults
+  - term: ErrorBody
+    definition: The body of every error response.
+    tags:
+    - Object
+    source: openapi/shiprust-openapi.json#/components/schemas/ErrorBody
+  - term: Limits
+    definition: 'Object declared by the contract with fields: description, name, slug.'
+    tags:
+    - Object
+    source: openapi/shiprust-openapi.json#/components/schemas/Limits
+  - term: MaxLength
+    definition: 'Object declared by the contract with fields: max.'
+    tags:
+    - Object
+    source: openapi/shiprust-openapi.json#/components/schemas/MaxLength
+  - term: Options
+    definition: The generator's choices, their defaults and the input limits.
+    tags:
+    - Object
+    source: openapi/shiprust-openapi.json#/components/schemas/Options
+  - term: Project
+    definition: A generated project and the choices it was generated with.
+    tags:
+    - Object
+    source: openapi/shiprust-openapi.json#/components/schemas/Project
+  - term: ProjectList
+    definition: 'Object declared by the contract with fields: projects.'
+    tags:
+    - Object
+    source: openapi/shiprust-openapi.json#/components/schemas/ProjectList
+  - term: ProjectZip
+    definition: A project's generated zip archive.
+    tags:
+    - Object
+    source: openapi/shiprust-openapi.json#/components/schemas/ProjectZip
+  - term: Range
+    definition: 'Object declared by the contract with fields: max, min.'
+    tags:
+    - Object
+    source: openapi/shiprust-openapi.json#/components/schemas/Range
+  - term: SlugLimit
+    definition: 'Object declared by the contract with fields: max, pattern.'
+    tags:
+    - Object
+    source: openapi/shiprust-openapi.json#/components/schemas/SlugLimit
