@@ -1,0 +1,47 @@
+aid: shiprust
+name: ShipRust
+description: 'ShipRust is a company surfaced via the API Evangelist harvest backlog (source: new-submission)
+  and added to the network as a stub for full-pipeline profiling.'
+url: https://raw.githubusercontent.com/api-evangelist/shiprust/refs/heads/main/apis.yml
+x-type: company
+x-source: harvest:new-submission
+x-tier: stub
+x-tier-reason: harvest
+specificationVersion: '0.20'
+created: '2026-10-20'
+modified: '2026-10-20'
+tags:
+- Company
+apis: []
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
+- FN: APIs.json
+  email: info@apis.io
+common:
+- type: Website
+  url: https://shiprust.com
+- type: Documentation
+  url: https://shiprust.com/docs/api
+x-submission-notes: 'Hello APIs.io team,
+
+
+  Please consider ShipRust for your API catalog through the email route published at https://apis.io/add/.
+
+
+  API/product: ShipRust, built by Rasul Kireev (LVTD LLC)
+
+  Website: https://shiprust.com
+
+  REST API guide: https://shiprust.com/docs/api
+
+  OpenAPI 3.1 definition: https://shiprust.com/openapi.json
+
+  MCP guide: https://shiprust.com/docs/mcp
+
+  Hosted MCP endpoint: https://shiprust.com/mcp
+
+
+  ShipRust generates Rust SaaS starter projects using Axum, Maud and PostgreSQL. Its REST API let'
+x-submission-probe: root 200, OpenAPI 3.1 200, soft-404 clean
+x-submitted-by: Rasul Kireev <beacon@lvtd.dev> (email, 2026-10-19)
