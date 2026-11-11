@@ -136,7 +136,6 @@ x-submission-notes: 'Hello APIs.io team,
 
   ShipRust generates Rust SaaS starter projects using Axum, Maud and PostgreSQL. Its REST API let'
 x-submission-probe: root 200, OpenAPI 3.1 200, soft-404 clean
-x-submitted-by: Rasul Kireev <beacon@lvtd.dev> (email, 2026-10-19)
 x-coverage:
   state: gated
   reason: partner-login
